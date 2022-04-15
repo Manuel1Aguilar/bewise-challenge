@@ -1,6 +1,8 @@
 package com.bewise.challenges.sorting;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Sorting {
@@ -13,6 +15,7 @@ public class Sorting {
      */
     public static List<Jugador> ordenarPorPuntuacionYNombre(List<Jugador> jugadores) {
         //Ordenar por puntuacion de manera descendente
+
         for(int i = 0; i < jugadores.size() - 1 ; i++){
             boolean swapped = false;
             for(int j = 0; j < jugadores.size() - i - 1 ; j++){
@@ -45,7 +48,8 @@ public class Sorting {
                 break;
             }
         }
-
+//        jugadores.sort(Comparator.comparing(Jugador::getPuntuacion, Comparator.reverseOrder())
+//                .thenComparing(Jugador::getNombre));
         return jugadores;
     }
 
@@ -58,6 +62,7 @@ public class Sorting {
      * @return la lista ordenada de jugadores
      */
     public static List<Jugador> ordenarPorPuntuacionPerdidasYNombre(List<Jugador> jugadores) {
+
         //Ordenar por puntuacion de manera descendente
         for(int i = 0; i < jugadores.size() - 1; i++){
             boolean swapped = false;
@@ -109,6 +114,9 @@ public class Sorting {
                 break;
             }
         }
+//        jugadores.sort(Comparator.comparing(Jugador::getPuntuacion, Comparator.reverseOrder())
+//                .thenComparing(Jugador::getPerdidas)
+//                .thenComparing(Jugador::getNombre));
 
         return jugadores;
     }
