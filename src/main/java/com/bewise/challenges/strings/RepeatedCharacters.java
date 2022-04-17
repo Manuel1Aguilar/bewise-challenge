@@ -3,7 +3,6 @@ package com.bewise.challenges.strings;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class RepeatedCharacters {
 
